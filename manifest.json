@@ -10,6 +10,9 @@
     "128": "icons/icon128.png"
   },
   "default_locale": "en",
+  "permissions": [
+    "http://oap.accuweather.com"
+  ],
   "background": {
     "scripts": [
       "src/bg/background.js"
