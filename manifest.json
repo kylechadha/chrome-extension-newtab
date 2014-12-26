@@ -1,9 +1,9 @@
 {
-  "name": "CHANGE THIS : Extension boilerplate",
+  "name": "Personal Manifesto",
   "version": "0.0.1",
   "manifest_version": 2,
-  "description": "This extension was created with the awesome extensionizr.com",
-  "homepage_url": "http://extensionizr.com",
+  "description": "This extension creates a custom new tab -- one that displays my personal manifesto.",
+  "homepage_url": "http://kylechadha.com",
   "icons": {
     "16": "icons/icon16.png",
     "48": "icons/icon48.png",
@@ -17,6 +17,6 @@
     "persistent": true
   },
   "chrome_url_overrides": {
-    "newtab": "src/override/override.html"
+    "newtab": "src/override/newtab.html"
   }
 }
