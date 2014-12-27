@@ -10,8 +10,8 @@
 
 
 var extensionData = localStorage.getItem('newtab_extension') ? JSON.parse(localStorage.getItem('newtab_extension')) : {},
-    timeFormat = 'h:mm.ss',
-    timeFormatSwitch = false;
+    timeFormat = extensionData.format ? extensionData.format : 'h:mm.ss',
+    timeFormatSwitch = timeFormat == 'h:mm.ss' ? false : true;
 
 var updateText = function(item) {
   var selector = '.manifesto__' + item;
@@ -51,11 +51,14 @@ $(document).ready(function() {
     updateTime();
   }, 1000);
 
-  // Add listener for time section.
+  // Add click listener for time format selection.
   $('.time h1').on('click', function() {
     timeFormat = timeFormatSwitch ? 'h:mm.ss' : 'h:mm A';
     timeFormatSwitch = !timeFormatSwitch;
     updateTime();
+
+    extensionData['format'] = timeFormat;
+    localStorage.setItem('newtab_extension', JSON.stringify(extensionData));
   })
 
 });
