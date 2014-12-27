@@ -9,19 +9,21 @@
 //
 
 
-var extensionData = localStorage.getItem('newtab_extension') ? JSON.parse(localStorage.getItem('newtab_extension')) : {};
+var extensionData = localStorage.getItem('newtab_extension') ? JSON.parse(localStorage.getItem('newtab_extension')) : {},
+    timeFormat = 'h:mm.ss',
+    timeFormatSwitch = false;
 
 var updateText = function(item) {
   var selector = '.manifesto__' + item;
 
   extensionData[item] = $(selector).html();
   localStorage.setItem('newtab_extension', JSON.stringify(extensionData));
-}
+};
 
 var updateTime = function() {
-  var currentTime = moment().format('h:mm.ss');
+  var currentTime = moment().format(timeFormat);
   $('.time h1').text(currentTime);
-}
+};
 
 
 $(document).ready(function() {
@@ -48,5 +50,12 @@ $(document).ready(function() {
   setInterval(function() {
     updateTime();
   }, 1000);
+
+  // Add listener for time section.
+  $('.time h1').on('click', function() {
+    timeFormat = timeFormatSwitch ? 'h:mm.ss' : 'h:mm A';
+    timeFormatSwitch = !timeFormatSwitch;
+    updateTime();
+  })
 
 });
