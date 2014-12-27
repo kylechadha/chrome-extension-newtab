@@ -9,11 +9,6 @@
 //
 
 
-var updateTime = function() {
-  var currentTime = moment().format('h:mm.ss');
-  $('.time h1').text(currentTime);
-}
-
 var extensionData = localStorage.getItem('newtab_extension') ? JSON.parse(localStorage.getItem('newtab_extension')) : {};
 
 var updateText = function(item) {
@@ -23,14 +18,13 @@ var updateText = function(item) {
   localStorage.setItem('newtab_extension', JSON.stringify(extensionData));
 }
 
+var updateTime = function() {
+  var currentTime = moment().format('h:mm.ss');
+  $('.time h1').text(currentTime);
+}
+
 
 $(document).ready(function() {
-
-  // Update the current time.
-  updateTime();
-  setInterval(function() {
-    updateTime();
-  }, 1000);
 
   // If available in localStorage, set the header and the body text.
   if (extensionData.header) {
@@ -48,5 +42,11 @@ $(document).ready(function() {
   $('.manifesto__text').on('blur', function() {
     updateText('text');
   });
+
+  // Update the current time.
+  updateTime();
+  setInterval(function() {
+    updateTime();
+  }, 1000);
 
 });
