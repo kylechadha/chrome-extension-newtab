@@ -1,8 +1,8 @@
 {
-  "name": "Personal Manifesto",
-  "version": "0.0.1",
+  "name": "Better New Tab Page",
+  "version": "1.0.0",
   "manifest_version": 2,
-  "description": "This extension creates a custom new tab -- one that displays my personal manifesto.",
+  "description": "This extension creates a custom new tab. Use it to display a personal manifesto, your daily to do's, or whatever else you'd like!",
   "homepage_url": "http://kylechadha.com",
   "icons": {
     "16": "icons/icon16.png",
@@ -10,9 +10,6 @@
     "128": "icons/icon128.png"
   },
   "default_locale": "en",
-  "permissions": [
-    "http://oap.accuweather.com"
-  ],
   "background": {
     "page": "src/bg/background.html",
     "persistent": false

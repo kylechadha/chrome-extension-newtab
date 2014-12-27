@@ -1,7 +1,7 @@
 //
-//  ---------------------------------------------------
-//   Welcome to the 'Better New Tab' Chrome Extension!
-//  ---------------------------------------------------
+//  --------------------------------------------------------
+//   Welcome to the 'Better New Tab Page' Chrome Extension!
+//  --------------------------------------------------------
 //
 //   Created by Kyle Chadha
 //   www.kylechadha.com
