@@ -40,9 +40,15 @@ $(document).ready(function() {
   $('.manifesto__header').on('blur', function() {
     updateText('header');
   });
+  $('.manifesto__header').on('click', function() {
+    $('.edit-instructions').remove();
+  });
 
   $('.manifesto__text').on('blur', function() {
     updateText('text');
+  });
+  $('.manifesto__text').on('click', function() {
+    $('.edit-instructions').remove();
   });
 
   // Update the current time.

@@ -1,8 +1,8 @@
 {
-  "name": "Better New Tab Page",
-  "version": "1.0.0",
+  "name": "A Better New Tab Page",
+  "version": "1.0.1",
   "manifest_version": 2,
-  "description": "This extension creates a custom new tab. Use it to display a personal manifesto, your daily to do's, or whatever else you'd like!",
+  "description": "This extension creates a beautiful, customizable new tab page.",
   "homepage_url": "http://kylechadha.com",
   "icons": {
     "16": "icons/icon16.png",
