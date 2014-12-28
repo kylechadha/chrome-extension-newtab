@@ -1,6 +1,6 @@
 {
   "name": "A Better New Tab Page",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "manifest_version": 2,
   "description": "This extension creates a beautiful, customizable new tab page.",
   "homepage_url": "http://kylechadha.com",
